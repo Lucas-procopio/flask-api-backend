@@ -1,10 +1,13 @@
 from flask import Flask
 from pydantic import BaseModel
 
-server = Flask(__name__)
+def creating_app():
+    app = Flask(__name__)
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sql////tmp/crud_api.db'
+    return app
 
-@server.route('/data') #EndPoint
+@app.route('/data') #EndPoint
 def extracting_data():
     return 'OK'
 
-server.run()
+app.run()

@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 server = Flask(__name__)
 
-@server.get('/data')
+@server.route('/data') #EndPoint
 def extracting_data():
     return 'OK'
 

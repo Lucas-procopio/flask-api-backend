@@ -8,6 +8,6 @@ def configure(app):
 
 # Creating a table and conecting to database
 class Book(db.Model):
-    id = db.Collum(db.Integer, primary_key=True)
-    livro = db.Collum(db.String(255))
-    escritor = db.Collum(db.String(255))
+    id = db.Column(db.Integer, primary_key=True)
+    livro = db.Column(db.String(255))
+    escritor = db.Column(db.String(255))
